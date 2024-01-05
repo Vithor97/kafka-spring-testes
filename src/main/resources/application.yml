@@ -1,0 +1,13 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:29092  # Endereço do seu servidor Kafka
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Configurações adicionais para otimizar o desempenho
+      buffer-memory: 33554432
+      acks: all
+      retries: 1
+      batch-size: 16384
+      linger-ms: 1
+      max-request-size: 1048576
